@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dlmok5r6i-python-gitops
+  description: This is GitOps manifest for dlmok5r6i-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=dlmok5r6i-python
+    backstage.io/kubernetes-id: dlmok5r6i-python 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/dlmok5r6i-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dlmok5r6i-python
